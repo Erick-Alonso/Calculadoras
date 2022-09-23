@@ -87,32 +87,27 @@ namespace Calculadora_propiedades
             switch (op)
             {
                 case "+":
-                    Class_suma su = new Class_suma();
-                    su.can11 = can1; su.can22 = can2;
+                    Class_suma su = new Class_suma(can1, can2);
                     resu = su.suma().ToString();
                     break;
 
                 case "-":
-                    Class_resta re = new Class_resta();
-                    re.can11 = can1; re.can22 = can2;
+                    Class_resta re = new Class_resta(can1, can2);
                     resu = re.resta().ToString();
                     break;
 
                 case "*":
-                    Class_multiplicar mu = new Class_multiplicar();
-                    mu.can11 = can1; mu.can22 = can2;
+                    Class_multiplicar mu = new Class_multiplicar(can1, can2);
                     resu = mu.multiplicar().ToString();
                     break;
 
                 case "/":
-                    Class_dividir di = new Class_dividir();
-                    di.can11 = can1; di.can22 = can2;
+                    Class_dividir di = new Class_dividir(can1, can2);
                     resu = di.dividir().ToString();
                     break;
 
                 case "√":
-                    Class_raiz ra = new Class_raiz();
-                    ra.can11 = can1;
+                    Class_raiz ra = new Class_raiz(can1);
                     resu = ra.raiz().ToString();
                     break;
 
