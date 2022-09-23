@@ -20,11 +20,13 @@ namespace Calculadora_propiedades
         int cont = 0;
         double can1, can2;
         string op, resu;
+
         public void lim()
         {
             TxtCantidad.Clear();
             TxtCantidad.Focus();
         }
+
         public void asgintxt(string num)
         {
             if (cont != 0)
@@ -70,6 +72,7 @@ namespace Calculadora_propiedades
         {
             cont++;
             resu = TxtCantidad.Text;
+
             if (TxtCantidad.Text.Length >= 1)
             {
                can2 = double.Parse(TxtCantidad.Text);
@@ -87,27 +90,27 @@ namespace Calculadora_propiedades
             switch (op)
             {
                 case "+":
-                    Class_suma su = new Class_suma(can1, can2);
-                    resu = su.suma().ToString();
+                    Class_op op = new Class_op(); op.can11 = can1; op.can22 = can2;
+                    resu = op.suma().ToString();
                     break;
 
                 case "-":
-                    Class_resta re = new Class_resta(can1, can2);
+                    Class_resta re = new Class_resta(); re.can11 = can1; re.can22 = can2;
                     resu = re.resta().ToString();
                     break;
 
                 case "*":
-                    Class_multiplicar mu = new Class_multiplicar(can1, can2);
+                    Class_multiplicar mu = new Class_multiplicar(); mu.can11 = can1; mu.can22 = can2;
                     resu = mu.multiplicar().ToString();
                     break;
 
                 case "/":
-                    Class_dividir di = new Class_dividir(can1, can2);
+                    Class_dividir di = new Class_dividir(); di.can11 = can1; di.can22 = can2;
                     resu = di.dividir().ToString();
                     break;
 
                 case "√":
-                    Class_raiz ra = new Class_raiz(can1);
+                    Class_raiz ra = new Class_raiz(); ra.can11 = can1; ra.can22 = can2;
                     resu = ra.raiz().ToString();
                     break;
 

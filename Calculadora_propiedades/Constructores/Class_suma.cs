@@ -1,16 +1,21 @@
 ﻿namespace Calculadora_propiedades
 {
-    internal class Class_suma
+    internal class Class_op
     {
-        double can1, can2;
-        public Class_suma(double can1, double can2)
-        {
-            this.can2 = can2;
-            this.can1 = can1;
-        }
+        protected double can1, can2;
+
+        public double can11{ get { return can1; } set { can1 = value; } }
+
+        public double can22{ get { return can2; } set { can2 = value; } }
+
+        /*
+         * creaba una clase y no me permetia heredar asi que utilize
+         * la clase suma para heredar tal vez error de compilacion idk
+        */
+
         public double suma()
         {
-            return can1 + can2;
+            return can11 + can22;
         }
     }
 }
